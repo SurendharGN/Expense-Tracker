@@ -9,6 +9,9 @@ const RollingList = () => {
 
     const {deleteTransaction,transactions}=useContext(ExpenseTrackerContext)
     
+      
+    
+    
     
   return (
     <div className="">
@@ -25,8 +28,8 @@ const RollingList = () => {
                             </div>
                                 <p className="mr-5">{item.amount}</p>
                                 <p>{item.date.toString().slice(3,15)}</p>
-                                <div className="ml-10">
-                                    <DeleteOutlineIcon/>
+                                <div className="ml-10" onClick={()=> deleteTransaction(item.id)}>
+                                    <DeleteOutlineIcon />
                             </div>
                             </div>
                             

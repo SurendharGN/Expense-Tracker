@@ -6,7 +6,9 @@ import 'react-calendar/dist/Calendar.css';
 import RollingList from './RollingList';
 import Card from './Card';
 import { ExpenseTrackerContext } from '../context/context';
-import {v4 } from 'uuid'
+import {v4 } from 'uuid';
+import IncomeDoughnutChart from './IncomeDoughnutChart';
+import ExpenseDoughnutChart from './ExpenseDoughnutChart';
 
 
 
@@ -79,11 +81,11 @@ const Main = () => {
 
             <div className='flex justify-between '>
                 <div id="income" className=" bg-zinc-100 mt-5 h-96  flex-1">
-                    <Card title="Income"/>
+                   <IncomeDoughnutChart/>
                 </div>
 
                 <div id="expense" className="bg-zinc-100 mt-5 border-l border-l-black flex-1">
-                    <Card title="expense"/>
+                    <ExpenseDoughnutChart/>
                 </div>
             </div>
             
