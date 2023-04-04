@@ -1,20 +1,19 @@
 import Card from "./components/Card"
 import Main from './components/Main';
 import './App.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
+import History from "./pages/History";
 
 function App() {
     
   return (
     <div className=" h-screen text-center">
-
-        <div id="tracker" className="bg-white mb-6">
-            <Main/>
-        </div>
-        
-        
-
-        
-
+        <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<Main/>}></Route>
+                    <Route path='/History' element={<History/>}></Route>
+                </Routes>
+            </BrowserRouter>
     </div>
   );
 }
