@@ -3,20 +3,17 @@ import Calendar from 'react-calendar';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import { useState,useContext } from 'react';
 import '../stlying/calendar.css';
-import RollingList from './RollingList';
 import { ExpenseTrackerContext } from '../context/context';
 import {v4 } from 'uuid';
-import IncomeDoughnutChart from './IncomeDoughnutChart';
-import ExpenseDoughnutChart from './ExpenseDoughnutChart';
 import HistoryIcon from '@mui/icons-material/History';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import History from '../pages/History';
+import { Link } from 'react-router-dom';
+
 
 
 
 
 const initialState={
+    balance:0,
     amount:"",
     category:'',
     description:'',
@@ -39,7 +36,7 @@ const Main = () => {
         setData(initialState)
     }
 
-    console.log(data)
+    
   return (
     <div className='h-screen '>
         
@@ -47,7 +44,7 @@ const Main = () => {
             <h1 className="text-4xl font-thin font-raleway text-white ml-6"> Balance: {balance}</h1>
             <div className='flex text-white gap-2 justify-center items-center hover:scale-x-110 hover:scale-y-110 transition ease-in-out duration-300'>
                 <HistoryIcon/>
-                <a href='/History' className='text-2xl font-raleway font-thin mr-6'>View history</a>
+                <Link to='/History' className='text-2xl font-raleway font-thin mr-6'>View history</Link>
             </div>
         </div>
         
@@ -112,34 +109,15 @@ const Main = () => {
             </ul>
             </div>
 
-           
-            
-            
-            
-           <div className='flex justify-center mb-10 overflow-y-scroll h-40'>
-                <RollingList/>
-            </div>
-{/* 
-            
-
-            <div className='flex justify-between '>
-                <div id="income" className=" bg-zinc-100 mt-5 h-96  flex-1">
-                   <IncomeDoughnutChart/>
-                </div>
-
-                <div id="expense" className="bg-zinc-100 mt-5 border-l border-l-black flex-1">
-                    <ExpenseDoughnutChart/>
-                </div>
-            </div> */}
         </div>
 
          <div className='flex relaive justify-between w-3/5 items-center m-auto mt-5'>
-                <button className='bg-black text-white w-1/2 h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black'>
+                <Link to='/Income'  className='bg-black text-white w-1/2 h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black align-middle justify-center flex text-center pt-4 ' >
                     View Income
-                </button>
-                <button className='bg-black text-white w-1/2 ml-5 h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black'>
+                </Link>
+                <Link to='/Expense' className='bg-black text-white w-1/2 ml-5 h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black align-middle justify-center flex text-center pt-4'>
                     View Expense
-                </button>
+                </Link>
             </div>
             
     </div>

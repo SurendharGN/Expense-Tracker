@@ -1,21 +1,17 @@
 import Card from "./components/Card"
+import {Routes,Route} from 'react-router-dom'
 import Main from './components/Main';
-import './App.css';
-import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import History from "./pages/History";
-
+import Income from "./pages/Income";
+import Expense from"./pages/Expense"
 function App() {
     
-  return (
-    <div className=" h-screen text-center">
-        <BrowserRouter>
-                <Routes>
-                    <Route path='/' element={<Main/>}></Route>
-                    <Route path='/History' element={<History/>}></Route>
-                </Routes>
-            </BrowserRouter>
-    </div>
-  );
+  return <Routes>
+    <Route path='/' element={<Main/>}/>
+    <Route path='/History' element={<History/>}/>
+    <Route path='/Income' element={<Income/>}></Route>
+    <Route path='/Expense' element={<Expense/>}></Route>
+  </Routes>
 }
 
 export default App;
