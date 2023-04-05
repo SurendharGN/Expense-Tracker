@@ -80,7 +80,7 @@ const Main = () => {
                         
 
                     </div>
-                <ul className="lg:flex-row sm:flex-col sm:justify-center lg:flex justify-between">
+                <ul className="lg:flex-row sm:flex-col sm:ml-8 lg:flex justify-between">
 
                             
                                 <div className='flex flex-col gap-10 lg:ml-0  mt-10 text-left '>
@@ -97,11 +97,11 @@ const Main = () => {
 
                 </div>
 
-                <div className=" sm:ml-6 sm:flex sm:flex-col  ">
+                <div className=" sm:flex sm:flex-col">
                     
-                    <div className=''>
-                    <Calendar  className=' lg: h-96 flex flex-col  justify-center transition ease-in-out duration-300 hover:scale-x-105 hover:scale-y-105' value={data.date} onChange={(e)=>setData({...data, date: e})}  />
-                </div>
+                    
+                    <Calendar  className='sm:mr-5 lg: h-96 flex flex-col  justify-center transition ease-in-out duration-300 hover:scale-x-105 hover:scale-y-105' value={data.date} onChange={(e)=>setData({...data, date: e})}  />
+                
                 
                
                 </div>
