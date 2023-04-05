@@ -40,7 +40,7 @@ const Main = () => {
   return (
     <div className='h-screen '>
         
-        <div className='flex justify-between bg-black h-20  items-center w-3/5 m-auto mt-5'>
+        <div className='flex justify-between bg-black h-20 items-center w-3/5 m-auto mt-5'>
             <h1 className="text-4xl font-thin font-raleway text-white ml-6"> Balance: {balance}</h1>
             <div className='flex text-white gap-2 justify-center items-center hover:scale-x-110 hover:scale-y-110 transition ease-in-out duration-300'>
                 <HistoryIcon/>
@@ -80,10 +80,10 @@ const Main = () => {
                         
 
                     </div>
-                <ul className="flex justify-between">
+                <ul className="lg:flex-row sm:flex-col sm:ml-8 lg:flex justify-between">
 
                             
-                                <div className='flex flex-col gap-10 ml-10 mt-10 text-left '>
+                                <div className='flex flex-col gap-10 lg:ml-0  mt-10 text-left '>
                     
                     <input className='pl-5 font-raleway text-xl border border-black h-16 w-96 transition duration-200 focus:scale-x-105 focus:scale-y-105 focus:outline-none' value={data.category} onChange={(e)=>setData({...data, category: e.target.value})}placeholder='Category:'/>
 
@@ -91,17 +91,17 @@ const Main = () => {
 
                     <input className='pl-5 font-raleway text-xl border h-16 w-96 border-black  transition duration-200 focus:scale-x-105 focus:scale-y-105 focus:outline-none ' value={data.amount} onChange={(e)=>setData({...data, amount: e.target.value})} placeholder=' Amount:'/>
                      <div >
-                    <button className=' h-16 w-56 font-raleway font-thin text-xl mb-4 bg-black text-white transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black' type="submit" onClick={createTransaction}>CREATE</button>
+                    <button className='sm:w-96 sm:mb-10 h-16  font-raleway font-thin text-xl mb-4 bg-black text-white transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black' type="submit" onClick={createTransaction}>CREATE</button>
                 </div>
                 
 
                 </div>
 
-                <div className="flex flex-col">
+                <div className=" sm:flex sm:flex-col">
                     
-                    <div className='mr-14 '>
-                    <Calendar  className='h-96 flex flex-col  justify-center transition ease-in-out duration-300 hover:scale-x-105 hover:scale-y-105' value={data.date} onChange={(e)=>setData({...data, date: e})}  />
-                </div>
+                    
+                    <Calendar  className='sm:mr-5 lg: h-96 flex flex-col  justify-center transition ease-in-out duration-300 hover:scale-x-105 hover:scale-y-105' value={data.date} onChange={(e)=>setData({...data, date: e})}  />
+                
                 
                
                 </div>
