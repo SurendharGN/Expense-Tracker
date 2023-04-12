@@ -38,9 +38,9 @@ const Main = () => {
 
     
   return (
-    <div className='h-screen '>
+    <div className='md:flex md:justify-center md:flex-col '>
         
-        <div className='flex md:flex-row justify-between bg-black md:h-20 items-center md:w-3/5 m-auto mt-5 xs:text-center xs:h-14 xs:mx-5'>
+        <div className='flex md:flex-row justify-between bg-black md:w-screen items-center md:mx-0 md:h-20 md:mt-0  m-auto xs:mt-5 xs:text-center xs:h-14 xs:mx-5 '>
             <h1 className="text-4xl font-thin font-raleway text-white ml-6 xs:text-lg"> Balance: {balance}</h1>
             <div className='flex text-white gap-2 justify-center items-center hover:scale-x-110 hover:scale-y-110 transition ease-in-out duration-300 '>
                 <HistoryIcon/>
@@ -48,7 +48,7 @@ const Main = () => {
             </div>
         </div>
         
-        <div  className="md:w-3/5 border border-black m-auto mt-5 xs:mx-5">
+        <div  className="md:w-3/5 border border-black md:mx-auto mt-5 xs:mx-5">
             <div className='my-6'>
                 <div className="w-48 pl-10 cursor-pointer flex flex-col justify-between relative" onClick={()=>{setOpen((prev)=>!prev);setShowType(false)}}>
                     {showType && <div className='flex text-left gap-16'>
@@ -116,15 +116,15 @@ const Main = () => {
 
         </div>
 
-         <div className='flex md:flex-row relaive justify-between w-3/5 items-center m-auto mt-5 xs:flex-col xs:gap-5 '>
+         <div className='flex md:flex-row  justify-between md:w-96 md:gap-2 items-center  mt-5 xs:flex-col xs:gap-5 '>
 
             <div className=''>
-                 <Link to='/Income'  className='bg-black text-white md:w-1/2 md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black align-middle justify-center flex text-center pt-4 xs:w-80 xs:h-12 xs:mx-16  ' >
+                 <Link to='/Income'  className='bg-black text-white md:w-48 md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black align-middle justify-center flex text-center pt-4 xs:w-80 xs:h-12 xs:mx-16  ' >
                     View Income
                 </Link>
             </div>
             <div className='flex items-center align-middle'>
-                 <Link to='/Expense' className='bg-black text-white md:w-1/2 md:ml-5 md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black justify-center flex text-center pt-4 xs:w-80 xs:h-12 '>
+                 <Link to='/Expense' className='bg-black text-white md:w-48 md:ml-5 md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black justify-center flex text-center pt-4 xs:w-80 xs:h-12 '>
                     View Expense
                 </Link>
             </div>
