@@ -25,17 +25,17 @@ const RollingList = () => {
 
                                         <div className='h-8 w-px bg-gray-300 mx-3'></div>
                                 
-                                        <p className='font-raleway md:text-xl xs:text-sm font-light xs:w-24'>{item.date.toString().slice(3,15).split('/')}</p>
+                                        <p className='font-raleway  xs:text-sm font-light xs:w-24'>{item.date.toString().slice(3,15).split('/')}</p>
                                         </div>
 
                                         <h1 className='font-raleway md:text-lg xs:text-sm font-light text-left'>{item.description.charAt(0).toUpperCase()+item.description.slice(1)}</h1>
                                 </div>
                                 
-                                <div className=' mr-10 flex md:items-top md:flex-row xs:flex-col xs:items-center xs:gap-2 '>
-                                    <p className="md:px-8 md:py-4  font-raleway h-16 md:text-xl font-thin flex items-center  shadow-md  xs:w-16 xs:h-8">{item.type==="Income"?`+ ${item.amount}`:`- ${item.amount}`}</p>
+                                <div className=' mr-10 flex md:items-top md:flex-row  xs:flex-col xs:items-center xs:gap-2 '>
+                                    <p className=" md:py-4  font-raleway h-16 md:text-xl   flex items-center  shadow-sm font-medium xs:w-16 xs:h-8">{item.type==="Income"?`+ ${item.amount}`:`- ${item.amount}`}</p>
 
                                     <div className="md:ml-10 " onClick={()=> deleteTransaction(item.id)}>
-                                    <button className='md:h-16 flex items-center justify-center md:px-8 md:py-3  font-raleway md:text-2xl font-thin  shadow-md xs:h-8 xs:w-16'>Delete</button>
+                                    <button className='md:h-8 flex items-center justify-center md:px-8 md:py-3  font-raleway md:font-medium font-thin  shadow-md xs:h-8 xs:w-16'>Delete</button>
                                     </div>
                                 </div>
                                 

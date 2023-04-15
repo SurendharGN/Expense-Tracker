@@ -20,15 +20,15 @@ const History = () => {
         </div>
         <RollingList/>
 
-        <div className='flex md:flex-row relaive justify-between w-3/5 items-center m-auto mt-5 xs:flex-col xs:gap-5 '>
+        <div className='flex md:flex-row  justify-between md:w-3/5 md:m-auto items-center m-auto mt-5 xs:flex-col xs:gap-5 '>
 
             <div className='flex align-middle'>
-                 <Link to='/Income'  className='bg-black text-white md:w-1/2 md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black align-middle justify-center flex text-center pt-4 xs:w-80 xs:h-12 xs:mx-16  ' >
+                 <Link to='/Income'  className='bg-black text-white md:w-[28rem] md:h-16 md:m-0 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black align-middle justify-center flex text-center pt-4 xs:w-80 xs:h-12 xs:mx-16  ' >
                     View Income
                 </Link>
             </div>
             <div className='flex items-center align-middle'>
-                 <Link to='/Expense' className='bg-black text-white md:w-1/2 md:ml-5 md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black justify-center flex text-center pt-4 xs:w-80 xs:h-12 '>
+                 <Link to='/Expense' className='bg-black text-white md:w-[28rem]  md:h-16 font-raleway font-thin text-2xl transition duration-300 ease-in-out hover:scale-x-110 hover:scale-y-110 hover:bg-white hover:text-black hover:border hover:border-black justify-center flex text-center pt-4 xs:w-80 xs:h-12 '>
                     View Expense
                 </Link>
             </div>
